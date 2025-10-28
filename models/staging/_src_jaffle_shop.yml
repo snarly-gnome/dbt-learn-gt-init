@@ -5,3 +5,17 @@ sources:
     tables:
       - name: customers 
       - name: orders
+        config:
+          freshness:
+            warn_after:
+              count: 50
+              period: hour
+            error_after:
+              count: 100
+              period: hour
+          
+          loaded_at_field: _etl_loaded_at
+
+      
+
+      
